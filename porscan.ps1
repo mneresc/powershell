@@ -2,7 +2,7 @@
 param($ip,$porta)
 
 if(Test-NetConnection $ip -Port $porta Quiet){
-    echo "Porta aberta"
+    echo "Porta $porta aberta"
 }else{
     echo "Porta fechada"
 }
