@@ -1,5 +1,7 @@
-# port scam
-if(Test-Connection www.businesscorp.com.br -Port 80 Quiet){
+# port scan
+param($ip,$porta)
+
+if(Test-NetConnection $ip -Port $porta Quiet){
     echo "Porta aberta"
 }else{
     echo "Porta fechada"
